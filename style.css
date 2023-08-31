@@ -1,86 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 *{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Handjet', cursive;
+}
+body{
+    width: 100%;
+    overflow: hidden;
 }
 main{
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 100%;
-    width: 100%;
     height: 100vh;
+    width: 100%;
+    background: #435941;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ctnr{
+    width: 38%;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
-#div_1{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 200px;
-    width: 400px;
+h1{
+    filter: drop-shadow(2px 2px 2px #000);
+    scale: 1.5;
+    margin: 100px;
 }
-.mini_div{
-    height: 125px;
-    width: 125px;
-    background-size:auto;
-    background-repeat: no-repeat;
-    border-radius: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffffff;
-    filter: opacity(50%);
+#h2o{
+    filter: drop-shadow(2px 2px 2px #000);
+    scale: 1.5;
+    margin: 20px;
+    transition: all .5s;
+
+}
+#h2o:hover{
+    scale: 1.6;
+    cursor: pointer;
+}
+.containerr{
+    width: 220px;
+    height: 165px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    background: #438634;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    place-items: center;
+    filter: drop-shadow(2px 2px 2px #000);
     transition: all .5s;
 }
-#mini_div_1{
-    height: 47px;
-    width: 230px;
-    display: flex;
-    margin: 10px;
-}
-.mini_div:hover{
+.containerr:hover{
     cursor: pointer;
-    filter: drop-shadow(2px 2px 4px #ececec);
+    background: #548d35;
+    color: white;
 }
-#img_0{
-    width: 100%;
-    height: 100%;
+#chsNck{
+    width: 220px;
+    background: #617e68;
+    height: 55px;
+    font-size: 2rem;
+    border-radius: 10px;
 }
-#img_1{
-    width: 70%;
-    height: 70%;
+#chsNck::placeholder{
+    content: "inserisci il nome";
+    padding: 5px;
 }
-.possibilita{
-    width: 25px;
-    height: 25px;
-    background: #66ff00;
-    border: 1px solid #000;
+#avanti{
+    width: 130px;
+    background: #548d35;
+    border: 2px solid #000;
+    height: 50px;
+    font-size: 2rem;
+    margin: 15px;
 }
-.cas{
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgb(255, 255, 255);
+#divDelCazzo{
+    display:  flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#div1{
+    display:  flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center
+}
+.words{
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgb(191, 191, 191);
+    font-size: 2rem;
+}
+#divWord{
+    display: flex;
+    margin: 50px;
+}
+.words{
+    font-size: 2rem;
     display: grid;
     place-content: center;
-    margin-top: 20px;
-}
-#mini_div_2{
-    display: flex;
-}
-#div_2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#input{
-    margin: 20px;
-    scale: 1.5;
-    background: rgba(15, 15, 15, 0.29);
-    padding: 5px;
-    border: #ffffff;
 }
