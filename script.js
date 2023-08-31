@@ -142,38 +142,29 @@ var paroleSegretee = [
 ]
 var parolaSegreta = paroleSegrete[Math.floor(Math.random() * paroleSegrete.length)];
 var parolaSegretaa = paroleSegretee[Math.floor(Math.random() * paroleSegretee.length)];
- 
+console.log(parolaSegreta+" "+parolaSegretaa)
 
 //######################## GLOBAL VARIABLES ###########################à
 let body = document.querySelector('body')
 let main = document.querySelector('main')
 let possibilita=6
 
+main.innerHTML = ""
+let h1 = document.createElement('h1')
 
-function play(mode){
-    console.log(mode)
-    main.innerHTML = ""
-    let h1 = document.createElement('h1')
-
-    switch(mode.id){
-        case 'I':
-            h1.textContent = "scegli il tuo nickname..."
-            let input = document.createElement('input')
-            input.id = "chsNck"
-            input.placeholder = " inserisci il nome"
-            let btn = document.createElement('button')
-            btn.id = "avanti"
-            btn.textContent = "avanti"
-            main.appendChild(h1)
-            main.appendChild(input)
-            main.appendChild(btn)
-            btn.onclick = function() {start(input, mode.id)} 
-        break;
-        case 'II':
-        break;
-    }
-}
-function start(name, players){
+h1.textContent = "scegli il tuo nickname..."
+let input = document.createElement('input')
+input.id = "chsNck"
+input.placeholder = " inserisci il nome"
+let btn = document.createElement('button')
+btn.id = "avanti"
+btn.textContent = "avanti"
+main.appendChild(h1)
+main.appendChild(input)
+main.appendChild(btn)
+btn.onclick = function() {start(input)} 
+        
+function start(name){
      
     if(name.value == "")
     {
@@ -361,15 +352,17 @@ function ver(e, input, h1, nick, nVite, x){
     let found = false, i;
     if(e.key == "Enter" && input.value!=""){
         for(i=0; i<x.length; i++ ){
+
             if(input.value == x[i]){
                 found = true;
                 w[i].textContent = input.value
-                input.value=""
             }else if(input.value == x){
                 alert("hai vinto")
                 return
             }
         }
+        input.value=""
+
         if(!found)
         {
             input.value=""
@@ -385,12 +378,13 @@ function ver(e, input, h1, nick, nVite, x){
             window.location.reload();
         }
         let end = true
-        w.forEach(sq => {
-            if(sq.textContent == "")
+        for(let i=0; i<w.length; ++i){
+            console.log(w[i].textContent)
+            if(w[i].textContent == "")
                 end = false
-        });
-        if(!end){
-            alert("hai perso!")
+        }
+        if(end){
+            alert("hai vinto!")
             window.location.reload()
         }
 
